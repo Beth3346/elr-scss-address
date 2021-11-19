@@ -43,6 +43,8 @@ hr {
 .demo-content {
   position: relative;
   padding: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
+}
+
+.address-block {
+  @include elr-address-block;
 }
