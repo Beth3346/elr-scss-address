@@ -59,8 +59,6 @@ gulp.task("default", done => {
   copyImages();
   copyHtml();
   processStyles();
-  processScripts();
-  // console.log({ styles });
   done();
 });
 
