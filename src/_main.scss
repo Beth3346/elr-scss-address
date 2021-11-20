@@ -1,10 +1,11 @@
 @import "elr-scss-functions/src/main";
+@import "elr-scss-config/src/main";
 
 @mixin elr-address-block($config: ()) {
   $config: extend(
     (
-      color: #111,
-      accent-color: #f81190,
+      color: $text-color,
+      accent-color: $accent-color,
     ),
     $config
   );
