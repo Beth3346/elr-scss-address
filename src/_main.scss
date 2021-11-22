@@ -5,7 +5,7 @@
   $config: extend(
     (
       color: $text-color,
-      accent-color: $accent-color,
+      accent-color: $secondary-color,
     ),
     $config
   );
