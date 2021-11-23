@@ -11,7 +11,7 @@
     "build": "parcel build src/index.html",
     "serve": "parcel serve src/index.html",
     "prepare": "husky install",
-    "test": "echo 'no tests for scss'",
+    "test": "npm run build",
     "update": "ncu",
     "update:install": "ncu -u && npm install",
     "np": "np"
@@ -41,8 +41,7 @@
   "np": {
     "yarn": false,
     "branch": "main",
-    "tests": false,
-    "contents": "src"
+    "tests": true
   },
   "browserslist": [
     "last 3 versions"
