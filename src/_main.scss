@@ -4,13 +4,13 @@
 @mixin elr-address-block($config: ()) {
   $config: extend(
     (
-      color: $text-color,
+      primary-color: $primary-color,
       accent-color: $secondary-color,
     ),
     $config
   );
 
-  $color: map-get($config, color);
+  $primary-color: map-get($config, primary-color);
   $accent-color: map-get($config, accent-color);
 
   .address {
@@ -24,7 +24,7 @@
     padding: 0;
     font-size: 14px;
     display: block;
-    color: $color;
+    color: $text-color;
   }
 
   .business-name-line {
@@ -55,7 +55,7 @@
     margin-right: 4px;
     position: relative;
     // top: -1px;
-    color: #005ebd;
+    color: $primary-color;
     font-weight: 900;
 
     // @media (max-width: 768px) {
