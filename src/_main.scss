@@ -13,16 +13,20 @@
   $primary-color: map-get($config, primary-color);
   $accent-color: map-get($config, accent-color);
 
-  .address {
+  address {
     font-style: normal;
-    margin-bottom: 8px;
+    margin-bottom: $base-fontsize * 0.5;
+
+    span {
+      font-style: normal;
+    }
   }
 
   .address-line {
     line-height: 1.3;
-    margin: 0 0 4px;
+    margin: 0 0 ($base-fontsize * 0.25);
     padding: 0;
-    font-size: 14px;
+    font-size: $base-fontsize * 0.875;
     display: block;
     color: $text-color;
   }
@@ -31,19 +35,24 @@
     font-weight: 900;
     line-height: 1.5;
     color: $accent-color;
-    font-size: 18px;
+    font-size: $base-fontsize * 1.125;
+    border-bottom: $border;
+    display: block;
+    width: 100%;
+    padding-bottom: ($base-fontsize * 0.25);
+    margin-bottom: $base-fontsize * 0.5;
   }
 
   .contact-line {
     line-height: 1.3;
     display: flex;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    font-size: 14px;
+    margin-top: ($base-fontsize * 0.25);
+    margin-bottom: ($base-fontsize * 0.25);
+    font-size: $base-fontsize * 0.875;
 
     .fa-icon {
-      font-size: 16px;
-      margin-right: 4px;
+      font-size: $base-fontsize;
+      margin-right: ($base-fontsize * 0.25);
       position: relative;
       top: 1px;
     }
@@ -52,14 +61,9 @@
   .contact-label {
     display: flex;
     align-items: center;
-    margin-right: 4px;
+    margin-right: ($base-fontsize * 0.25);
     position: relative;
-    // top: -1px;
-    color: $primary-color;
+    color: $accent-color;
     font-weight: 900;
-
-    // @media (max-width: 768px) {
-    //   top: 0;
-    // }
   }
 }
