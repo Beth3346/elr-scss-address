@@ -45,36 +45,5 @@
 }
 
 .locations {
-  .locations-heading {
-    color: $primary-color;
-    font-weight: 900;
-    border-bottom: $border;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-  }
-
-  .location-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .location-item {
-    @include elr-address-block;
-    flex-basis: 25%;
-    padding: 32px 48px;
-
-    &:nth-child(1n - 1) {
-      padding-left: 0;
-    }
-
-    &:nth-child(4n) {
-      padding-right: 0;
-    }
-
-    .business-name-line {
-      font-size: 24px;
-    }
-  }
+  @include elr-locations-list;
 }

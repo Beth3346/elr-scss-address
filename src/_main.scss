@@ -5,7 +5,7 @@
   $config: extend(
     (
       primary-color: $primary-color,
-      accent-color: $secondary-color,
+      accent-color: #e3037e,
     ),
     $config
   );
@@ -65,5 +65,128 @@
     position: relative;
     color: $accent-color;
     font-weight: 900;
+  }
+}
+
+@mixin elr-locations-list($config: ()) {
+  $config: extend(
+    (
+      heading-color: $primary-color,
+      accent-color: $tertiary-color,
+      border-color: $light-gray,
+      background-color: #111,
+    ),
+    $config
+  );
+
+  $heading-color: map-get($config, heading-color);
+  $accent-color: map-get($config, accent-color);
+  $border-color: map-get($config, border-color);
+  $background-color: map-get($config, background-color);
+
+  padding: ($base-fontsize * 2) ($base-fontsize * 3) 0;
+  border-radius: $border-radius;
+
+  @media (max-width: 660px) {
+    padding-bottom: ($base-fontsize * 2);
+  }
+
+  .locations-heading {
+    color: $heading-color;
+    font-weight: 900;
+    border-bottom: 1px solid $border-color;
+    margin: 0;
+    padding: 0;
+    padding-bottom: $base-fontsize * 0.5;
+    margin-bottom: $base-fontsize;
+  }
+
+  .location-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .location-item {
+    @include elr-address-block;
+    flex-basis: 25%;
+    padding: ($base-fontsize * 2) ($base-fontsize * 3);
+
+    @media (min-width: ($landscape-width + 1)) {
+      &:nth-child(1n - 1) {
+        padding-left: 0;
+      }
+
+      &:nth-child(4n) {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: $landscape-width) and (min-width: ($tablet-width + 1)) {
+      flex-basis: 33.33%;
+
+      &:nth-child(1n - 1) {
+        padding-left: 0;
+      }
+
+      &:nth-child(3n) {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: $tablet-width) and (min-width: 661px) {
+      flex-basis: 50%;
+      padding: ($base-fontsize) ($base-fontsize * 2);
+
+      &:nth-child(odd) {
+        padding-left: 0;
+      }
+
+      &:nth-child(even) {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: 660px) {
+      flex-basis: 100%;
+      padding: ($base-fontsize * 0.75) 0;
+    }
+
+    .business-name-line {
+      font-size: $base-fontsize * 1.5;
+    }
+  }
+
+  &.locations-dark {
+    background-color: $background-color;
+
+    .locations-heading {
+      color: $light-pink;
+    }
+
+    p {
+      color: $white;
+    }
+
+    .location-item {
+      span {
+        color: $white;
+      }
+
+      .business-name-line {
+        color: $accent-color;
+      }
+
+      .contact-label {
+        color: $light-pink;
+      }
+
+      .fa-icon {
+        color: $light-pink;
+      }
+    }
   }
 }
