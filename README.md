@@ -4,8 +4,12 @@
 [![CI](https://github.com/Beth3346/elr-scss-address/actions/workflows/node.js.yml/badge.svg)](https://github.com/Beth3346/elr-scss-address/actions/workflows/node.js.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-address.svg?style=flat)](https://npmjs.com/package/elr-scss-address)
+[![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-accordion-nav.svg)](https://github.com/Beth3346/elr-scss-address)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e052569d-7273-4c09-a4fe-248a2a3180bb/deploy-status)](https://app.netlify.com/sites/elr-locations/deploys)
 
 a scss mixin for addresses
+
+[View Demo](https://elr-locations.netlify.app/)
 
 ## Screenshots
 
@@ -22,7 +26,7 @@ a scss mixin for addresses
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
 ```sh
-npm install elr-scss-address --save
+npm install elr-scss-address
 ```
 
 or
