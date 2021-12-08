@@ -1,11 +1,21 @@
-# elr-scss-address
+# Address and Location Listing Styles
 
+[![npm version](http://img.shields.io/npm/v/elr-scss-address.svg)](https://www.npmjs.org/package/elr-scss-address)
+[![Build Status](https://github.com/elr-scss-address/workflows/CI/badge.svg)](https://github.com/elr-scss-address/actions?workflow=CI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-address.svg?style=flat)](https://npmjs.com/package/elr-scss-address)
 
 a scss mixin for addresses
 
-![Screenshot of styled address](./src/screenshot.png)
+## Screenshots
+
+### Address Block
+
+![Screenshot of address block](./src/screenshot.png)
+
+### Locations List
+
+![Screenshot of locations list](./src/screenshot-locations.png)
 
 ## Installation
 
@@ -23,12 +33,14 @@ yarn add elr-scss-address
 
 ## Implementation
 
-### Arguments
+### Address Block
+
+#### Arguments
 
 primary-color: primary text color
 accent-color: accent text color
 
-### Scss
+#### Scss
 
 ```scss
 @import "elr-scss-address";
@@ -43,7 +55,7 @@ accent-color: accent text color
 }
 ```
 
-### HTML
+#### HTML
 
 ```html
 <div class="address-block">
